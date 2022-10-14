@@ -7,7 +7,6 @@ const defaults = {
     alphabet: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 }
 
-
 const Translator = (sourceAlphabet: string[], targetAlphabet: string[]) => (message: string) => message
     .split('')
     .map((c) => targetAlphabet[sourceAlphabet.indexOf(c)] || c)
@@ -18,10 +17,13 @@ export const XCaesar = (options: XCaesarOptions) => {
     const alphabetOriginal = (options.alphabet || defaults.alphabet).split("")
     const alphabetShifted = alphabetOriginal.map((_, i) => alphabetOriginal[modulo(i + shift, alphabetOriginal.length)]);
     return {
-        shift,
         encrypt: Translator(alphabetOriginal, alphabetShifted),
         decrypt: Translator(alphabetShifted, alphabetOriginal),
-        alphabet: { original: alphabetOriginal, shifted: alphabetShifted }
+        shift,
+        alphabet: {
+            original: alphabetOriginal.join(""),
+            shifted: alphabetShifted.join("")
+        }
     };
 };
 
