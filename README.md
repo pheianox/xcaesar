@@ -1,6 +1,6 @@
-# xcaeser
+# xcaesar
 
-The Caesar Cipher implementation in TypeScript
+The implementation of the Caesar Cipher in TypeScript
 
 # Installation
 ```bash
@@ -27,7 +27,7 @@ console.log('Decrypted Message: ' + decryptedMessage);
 ```ts
 interface XCaesarOptions {
     shift: number
-    alphabet?: string /* default: abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ */
+    alphabet?: string // default is abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
 }
 
 interface XCaesar {
