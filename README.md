@@ -1,6 +1,4 @@
-# xcaesar
-
-The implementation of the Caesar Cipher in TypeScript
+The implementation of the [Caesar Cipher](https://www.wikiwand.com/en/Caesar_cipher) in TypeScript
 
 # Installation
 ```bash
